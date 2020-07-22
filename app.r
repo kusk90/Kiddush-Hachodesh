@@ -80,7 +80,7 @@ mana2 = lookup(round(to_sec(corr_epi)/3600,0),kh_tables$degree,kh_tables$table3)
 true_moon = (to_sec(mean_moon_adj) + mana2*60) %>% from_sec()
 circos.trackPoints(factor = 1, x=true_moon[1], y=5, col = "blue", pch = 21, cex = 3)
 
-########## rochav (latitude) ###########
+########## first rochav (latitude) ###########
 mean_rosh = (3600*360 - (to_sec(base_rosh) + to_sec(rosh)*days)) %>% from_sec()
 mean_zanav = mean_rosh - c(180,0,0,0)
 mean_zanav = if_else(mean_zanav < 0, mean_zanav + 360, mean_zanav)
@@ -95,7 +95,7 @@ lat_dir = case_when(maslul_lat == 0 ~ 'X',
                     maslul_lat > 180 ~ 'S')
 lat1 = lookup(maslul_lat,kh_tables$degree,kh_tables$table4)
 
-####### Orech (longitude) and rochav (latitude) #######
+####### orech (longitude) and rochav (latitude) #######
 
 long1 = to_sec(true_moon) - to_sec(true_sun)
 long1 = if_else(long1 < 0, long1 + 360*3600, long1) %>% from_sec()
