@@ -1,2 +1,2 @@
 # Kiddush-Hachodesh
-Calculate current position of sun and moon, and visibility of the moon, based on Hilchos Kiddush Hachodesh
+Calculate position of sun and moon, and whether or not the moon is visible, for any date. Based on Hilchos Kiddush Hachodesh
