@@ -120,6 +120,9 @@ long3 = if_else(lat_dir == 'N',
 
 adj4 = lookup(true_moon[1],kh_tables$degree,kh_tables$table7)
 long4 = (to_sec(long3) + to_sec(long3)*adj4) %>% from_sec()
+
+####### visibility of moon #######
+  
 adj5 = 2/3*lat1*60       #menas govah hamedina
 vis_points = if_else(lat_dir == 'N', to_sec(long4) + adj5, to_sec(long4) - adj5) %>% from_sec
 
